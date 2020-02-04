@@ -1,0 +1,11 @@
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\bin\Debug\netcoreapp3.1\RouteCalculator.Data.deps.json
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\bin\Debug\netcoreapp3.1\RouteCalculator.Data.dll
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\obj\Debug\netcoreapp3.1\RouteCalculator.Data.csprojAssemblyReference.cache
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\obj\Debug\netcoreapp3.1\RouteCalculator.Data.AssemblyInfoInputs.cache
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\obj\Debug\netcoreapp3.1\RouteCalculator.Data.AssemblyInfo.cs
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\bin\Debug\netcoreapp3.1\RouteCalculator.Data.pdb
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\obj\Debug\netcoreapp3.1\RouteCalculator.Data.dll
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\obj\Debug\netcoreapp3.1\RouteCalculator.Data.pdb
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\bin\Debug\netcoreapp3.1\Router.Domain.dll
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\bin\Debug\netcoreapp3.1\Router.Domain.pdb
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\RouteCalculator.Data\obj\Debug\netcoreapp3.1\RouteCalculator.Data.csproj.CopyComplete
