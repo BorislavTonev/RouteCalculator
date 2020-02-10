@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RouteCalculator.Data;
 
 namespace RouteCalculator.Data.Migrations
 {
     [DbContext(typeof(RouterContext))]
-    partial class RouterContextModelSnapshot : ModelSnapshot
+    [Migration("20200205232307_Add calculation date to logistics center table")]
+    partial class Addcalculationdatetologisticscentertable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,9 +48,6 @@ namespace RouteCalculator.Data.Migrations
 
                     b.Property<DateTime>("CalculationDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RoadId")
                         .HasColumnType("int");

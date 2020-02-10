@@ -13,7 +13,10 @@ import { ToastrService } from 'ngx-toastr';
 export class RoadsComponent implements OnInit {
 
   public roadsList: any[];
+  public locationsList: any[];
   public selectedRoad: any;
+  public startingPointId: number;
+  public endingPointId: number;
   title = 'modal2';
   editProfileForm: FormGroup;
 
@@ -24,10 +27,8 @@ export class RoadsComponent implements OnInit {
     private toastr: ToastrService) { }
 
   ngOnInit() {
-    this.dataService.getRoads().subscribe(roads => {
-      this.roadsList = roads;
-    });
-
+    this.loadRoads();
+    this.loadLoacations();
     this.editProfileForm = this.fb.group({
       id: [0],
       name: [''],
@@ -37,19 +38,33 @@ export class RoadsComponent implements OnInit {
     });
   }
 
+  public loadRoads() {
+    this.dataService.getRoads().subscribe(roads => {
+      this.roadsList = roads;
+    });
+  }
+
+  public loadLoacations() {
+    this.dataService.getLocations().subscribe(locations => {
+      this.locationsList = locations;
+    });
+  }
+
   openModal(targetModal, road) {
     this.modalService.open(targetModal, {
       centered: true,
       backdrop: 'static'
     });
-
-    this.editProfileForm.patchValue({
-      id: road.id,
-      name: road.name,
-      distance: road.distance,
-      startingPoint: road.startingPoint,
-      endingPoint: road.endingPoint
-    });
+    if (road) {
+      this.editProfileForm.patchValue({
+        id: road.id,
+        name: road.name,
+        distance: road.distance,
+        startingPoint: road.startingPoint,
+        endingPoint: road.endingPoint
+      });
+    }
+   
   }
   onSubmit() {
     this.modalService.dismissAll();
@@ -58,15 +73,19 @@ export class RoadsComponent implements OnInit {
   public saveChanges() {
     if (this.editProfileForm.value.id !== 0) {
       this.dataService.editRoad(this.editProfileForm.value).subscribe(
-        data => this.toastr.success('Road updated!'),
+        data => this.loadRoads(),
         err => this.toastr.error('Update failed!'),
+        () => this.toastr.success('Road updated!') 
       )
     } else {
       this.dataService.createRoad(this.editProfileForm.value).subscribe(
-        data => this.toastr.success('Road added!'),
+        data => this.loadRoads(),
         err => this.toastr.error('Adding failed!'),
+        () => this.toastr.success('Road added!')
       )
     }
+
+    this.resetForm();
     
   }
 
@@ -75,6 +94,8 @@ export class RoadsComponent implements OnInit {
   }
 
   public resetForm() {
+    this.startingPointId = undefined;
+    this.endingPointId = undefined;
     this.editProfileForm = this.fb.group({
       id: [0],
       name: [''],
@@ -84,5 +105,13 @@ export class RoadsComponent implements OnInit {
     });
     this.modalService.dismissAll();
     // modal.dismiss(
+  }
+
+  onStartingPointChange($event) {
+    this.startingPointId = $event.id;
+  }
+
+  onEndingPointChange($event) {
+    this.endingPointId =  $event.id
   }
 }

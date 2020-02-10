@@ -47,8 +47,9 @@ namespace RouteCalculator.Data.Repository
                 Name = road.Name,
                 Distance = road.Distance,
                 StartingPoint = road.StartingPoint,
-                EndingPoint = road.EndingPoint
-            };
+                EndingPoint = road.EndingPoint,
+                CalculatonDate = DateTime.Now
+        };
 
             _context.Roads.Add(newRec);
 
@@ -64,6 +65,7 @@ namespace RouteCalculator.Data.Repository
                 record.Distance = road.Distance;
                 record.StartingPoint = road.StartingPoint;
                 record.EndingPoint = road.EndingPoint;
+                record.CalculatonDate = road.CalculatonDate;
 
                 return _context.SaveChanges() > 0;
             }

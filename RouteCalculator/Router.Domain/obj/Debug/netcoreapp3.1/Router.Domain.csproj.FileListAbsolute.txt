@@ -1,8 +1,8 @@
 C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\Router.Domain\bin\Debug\netcoreapp3.1\Router.Domain.deps.json
 C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\Router.Domain\bin\Debug\netcoreapp3.1\Router.Domain.dll
 C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\Router.Domain\bin\Debug\netcoreapp3.1\Router.Domain.pdb
-C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\Router.Domain\obj\Debug\netcoreapp3.1\Router.Domain.csprojAssemblyReference.cache
 C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\Router.Domain\obj\Debug\netcoreapp3.1\Router.Domain.AssemblyInfoInputs.cache
 C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\Router.Domain\obj\Debug\netcoreapp3.1\Router.Domain.AssemblyInfo.cs
 C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\Router.Domain\obj\Debug\netcoreapp3.1\Router.Domain.dll
 C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\Router.Domain\obj\Debug\netcoreapp3.1\Router.Domain.pdb
+C:\Users\Teodora\source\repos\NewRepo\RouteCalculator\RouteCalculator\Router.Domain\obj\Debug\netcoreapp3.1\Router.Domain.csprojAssemblyReference.cache

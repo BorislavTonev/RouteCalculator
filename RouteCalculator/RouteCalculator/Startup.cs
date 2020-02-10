@@ -38,6 +38,7 @@ namespace RouteCalculator
 
             services.AddScoped<IRoadsRepository, RoadsRepository>();
             services.AddScoped<ILocationsRepository, LocationsRepository>();
+            services.AddScoped<ILogisticsCentersRepository, LogisticsCenterRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

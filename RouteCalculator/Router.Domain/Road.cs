@@ -11,5 +11,6 @@ namespace Router.Domain
         public int StartingPoint { get; set; }
         public int EndingPoint { get; set; }
         public double Distance { get; set; }
+        public DateTime CalculatonDate { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace RouteCalculator.Data.Interfaces
     public interface ILocationsRepository
     {
         List<Location> GetAllLocations();
-        bool AddLocation(Location newRoad);
-        bool EditLocation(int id);
+        bool AddLocation(Location newLoc);
+        bool EditLocation(Location newLoc);
     }
 }

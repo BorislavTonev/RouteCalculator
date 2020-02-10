@@ -12,8 +12,4 @@
     <ProjectReference Include="..\Router.Domain\Router.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
-
 </Project>

@@ -26,9 +26,8 @@ namespace RouteCalculator.Controllers
             {
                 return Ok(_repository.GetAllLocations());
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                var temp = e;
                 return BadRequest("Oopss!");
             }
         }
@@ -47,11 +46,11 @@ namespace RouteCalculator.Controllers
         }
 
         [HttpPut]
-        public IActionResult Edit(int id)
+        public IActionResult Edit([FromBody] Location location)
         {
             try
             {
-                return Ok(_repository.EditLocation(id));
+                return Ok(_repository.EditLocation(location));
             }
             catch (Exception)
             {

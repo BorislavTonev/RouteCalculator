@@ -39,12 +39,28 @@ namespace RouteCalculator.Data.Repository
 
         public bool AddLocation(Location loc)
         {
-            return true;
+            var newRec = new Location()
+            {
+                Name = loc.Name,
+                CalculatonDate = DateTime.Now
+            };
+
+            _context.Locations.Add(newRec);
+
+            return _context.SaveChanges() > 0;
         }
 
-        public bool EditLocation(int id)
+        public bool EditLocation(Location loc)
         {
-            return true;
+            var record = _context.Locations.Where(r => r.Id == loc.Id).FirstOrDefault();
+            if (record != null)
+            {
+                record.Name = loc.Name;
+                record.CalculatonDate = loc.CalculatonDate;
+                return _context.SaveChanges() > 0;
+            }
+
+            return false;
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RouteCalculator.Data.Interfaces;
 
 namespace RouteCalculator.Controllers
 {
@@ -11,36 +12,40 @@ namespace RouteCalculator.Controllers
     [ApiController]
     public class LogisticsCenterController : ControllerBase
     {
+
+        private readonly ILogisticsCentersRepository _repository;
+        public LogisticsCenterController(ILogisticsCentersRepository repository)
+        {
+            this._repository = repository;
+        }
+
         // GET: api/LogisticsCenter
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                return Ok(_repository.GetLogisticsCenter());
+            }
+            catch (Exception e)
+            {
+                return BadRequest("An error accured while getting logistics center");
+            }
         }
 
-        // GET: api/LogisticsCenter/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/LogisticsCenter
+      
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Create()
         {
+            try
+            {             
+                return Ok(_repository.CalculateLogisticsCenter());
+            }
+            catch (Exception )
+            {
+                return BadRequest("An error accured while creating logistics center");
+            }        
         }
-
-        // PUT: api/LogisticsCenter/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+  
     }
 }
